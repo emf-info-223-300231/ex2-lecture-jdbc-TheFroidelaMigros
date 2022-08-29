@@ -76,7 +76,7 @@ public class DbWorker implements DbWorkerItf {
         listePersonnes = new ArrayList<>();
         try {
             Statement st = dbConnexion.createStatement();
-            ResultSet rs = st.executeQuery("select PK_PERS, Prenom, Nom from 223_personne_1table.t_personne");
+            ResultSet rs = st.executeQuery("select PK_PERS, Prenom, Nom from t_personne");
             while (rs.next()) {
                 String nom = rs.getString("Nom");
                 String prenom = rs.getString("Prenom");
