@@ -85,7 +85,7 @@ public class DbWorker implements DbWorkerItf {
                 listePersonnes.add(pers);
             }
         } catch (SQLException ex) {
-            Logger.getLogger(DbWorker.class.getName()).log(Level.SEVERE, null, ex);
+            throw new MyDBException(SystemLib.getFullMethodName(), ex.getMessage());
         }
         return listePersonnes;
     }
@@ -111,7 +111,6 @@ public class DbWorker implements DbWorkerItf {
             index = index + 1;
         }
         Personne persSuivant = listePersonnes.get(index);
-
 
         return persSuivant;
     }
