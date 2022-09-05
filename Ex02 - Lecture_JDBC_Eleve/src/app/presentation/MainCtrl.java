@@ -78,8 +78,10 @@ public class MainCtrl implements Initializable {
    * METHODES PRIVEES 
      */
     private void afficherPersonne(Personne p) {
-        txtNom.setText(p.getNom());
-        txtPrenom.setText(p.getPrenom());
+        if(p != null){
+            txtNom.setText(p.getNom());
+            txtPrenom.setText(p.getPrenom());
+        }
 
     }
 
